@@ -17,6 +17,7 @@
 		F91D70292B70BE1200684429 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F91D70282B70BE1200684429 /* FirebaseMessaging */; };
 		F91D702B2B70BF8400684429 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F91D702A2B70BF8400684429 /* GoogleService-Info.plist */; };
 		F91D702E2B70C08D00684429 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F91D702D2B70C08D00684429 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		F91D70312B70EB9D00684429 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D70302B70EB9D00684429 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		F91D70152B702CB700684429 /* DemoFirebaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFirebaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F91D70222B70300E00684429 /* DemoFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoFirebase.entitlements; sourceTree = "<group>"; };
 		F91D702A2B70BF8400684429 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F91D702F2B70EB5900684429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F91D70302B70EB9D00684429 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +105,12 @@
 		F91D6FF72B702CB500684429 /* DemoFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				F91D702F2B70EB5900684429 /* Info.plist */,
 				F91D70222B70300E00684429 /* DemoFirebase.entitlements */,
 				F91D702A2B70BF8400684429 /* GoogleService-Info.plist */,
 				F91D6FF82B702CB500684429 /* DemoFirebaseApp.swift */,
 				F91D6FFA2B702CB500684429 /* ContentView.swift */,
+				F91D70302B70EB9D00684429 /* AppDelegate.swift */,
 				F91D6FFC2B702CB700684429 /* Assets.xcassets */,
 				F91D6FFE2B702CB700684429 /* Preview Content */,
 			);
@@ -282,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91D70312B70EB9D00684429 /* AppDelegate.swift in Sources */,
 				F91D6FFB2B702CB500684429 /* ContentView.swift in Sources */,
 				F91D6FF92B702CB500684429 /* DemoFirebaseApp.swift in Sources */,
 			);
@@ -452,6 +458,7 @@
 				DEVELOPMENT_TEAM = G49XQYC5WE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoFirebase/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DemoFire;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -490,6 +497,7 @@
 				DEVELOPMENT_TEAM = G49XQYC5WE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoFirebase/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DemoFire;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
