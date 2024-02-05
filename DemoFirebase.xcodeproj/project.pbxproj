@@ -14,6 +14,9 @@
 		F91D700A2B702CB700684429 /* DemoFirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D70092B702CB700684429 /* DemoFirebaseTests.swift */; };
 		F91D70142B702CB700684429 /* DemoFirebaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D70132B702CB700684429 /* DemoFirebaseUITests.swift */; };
 		F91D70162B702CB700684429 /* DemoFirebaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D70152B702CB700684429 /* DemoFirebaseUITestsLaunchTests.swift */; };
+		F91D70292B70BE1200684429 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F91D70282B70BE1200684429 /* FirebaseMessaging */; };
+		F91D702B2B70BF8400684429 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F91D702A2B70BF8400684429 /* GoogleService-Info.plist */; };
+		F91D702E2B70C08D00684429 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F91D702D2B70C08D00684429 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		F91D700F2B702CB700684429 /* DemoFirebaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoFirebaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91D70132B702CB700684429 /* DemoFirebaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFirebaseUITests.swift; sourceTree = "<group>"; };
 		F91D70152B702CB700684429 /* DemoFirebaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFirebaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F91D70222B70300E00684429 /* DemoFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoFirebase.entitlements; sourceTree = "<group>"; };
+		F91D702A2B70BF8400684429 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91D70292B70BE1200684429 /* FirebaseMessaging in Frameworks */,
+				F91D702E2B70C08D00684429 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,7 @@
 				F91D70082B702CB700684429 /* DemoFirebaseTests */,
 				F91D70122B702CB700684429 /* DemoFirebaseUITests */,
 				F91D6FF62B702CB500684429 /* Products */,
+				F91D702C2B70C08D00684429 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +102,8 @@
 		F91D6FF72B702CB500684429 /* DemoFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				F91D70222B70300E00684429 /* DemoFirebase.entitlements */,
+				F91D702A2B70BF8400684429 /* GoogleService-Info.plist */,
 				F91D6FF82B702CB500684429 /* DemoFirebaseApp.swift */,
 				F91D6FFA2B702CB500684429 /* ContentView.swift */,
 				F91D6FFC2B702CB700684429 /* Assets.xcassets */,
@@ -127,6 +137,13 @@
 			path = DemoFirebaseUITests;
 			sourceTree = "<group>";
 		};
+		F91D702C2B70C08D00684429 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +160,10 @@
 			dependencies = (
 			);
 			name = DemoFirebase;
+			packageProductDependencies = (
+				F91D70282B70BE1200684429 /* FirebaseMessaging */,
+				F91D702D2B70C08D00684429 /* FirebaseAnalyticsWithoutAdIdSupport */,
+			);
 			productName = DemoFirebase;
 			productReference = F91D6FF52B702CB500684429 /* DemoFirebase.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +236,9 @@
 				Base,
 			);
 			mainGroup = F91D6FEC2B702CB500684429;
+			packageReferences = (
+				F91D70252B70BE1200684429 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F91D6FF62B702CB500684429 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +257,7 @@
 			files = (
 				F91D70002B702CB700684429 /* Preview Assets.xcassets in Resources */,
 				F91D6FFD2B702CB700684429 /* Assets.xcassets in Resources */,
+				F91D702B2B70BF8400684429 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +444,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DemoFirebase/DemoFirebase.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240204;
 				DEVELOPMENT_ASSET_PATHS = "\"DemoFirebase/Preview Content\"";
 				DEVELOPMENT_TEAM = G49XQYC5WE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DemoFire;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -434,9 +463,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jva.DemoFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,12 +482,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DemoFirebase/DemoFirebase.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20240204;
 				DEVELOPMENT_ASSET_PATHS = "\"DemoFirebase/Preview Content\"";
 				DEVELOPMENT_TEAM = G49XQYC5WE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DemoFire;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,9 +501,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jva.DemoFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,6 +631,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F91D70252B70BE1200684429 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F91D70282B70BE1200684429 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F91D70252B70BE1200684429 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		F91D702D2B70C08D00684429 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F91D70252B70BE1200684429 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F91D6FED2B702CB500684429 /* Project object */;
 }
