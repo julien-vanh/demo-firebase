@@ -14,7 +14,7 @@ import FirebaseMessaging
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
+    
     Messaging.messaging().delegate = self
 
     let notificationCenter = UNUserNotificationCenter.current()
