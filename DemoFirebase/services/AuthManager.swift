@@ -37,7 +37,7 @@ class AuthManager: ObservableObject {
         Auth.auth().removeStateDidChangeListener(authStateHandle)
     }
 
-    func updateState(user: User?) {
+    private func updateState(user: User?) {
         self.user = user
         let isAuthenticatedUser = user != nil
         let isAnonymous = user?.isAnonymous ?? false
@@ -61,5 +61,13 @@ class AuthManager: ObservableObject {
     
     func logout() throws {
         try Auth.auth().signOut()
+    }
+    
+    func updateUser(displayName: String) async throws {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = displayName
+        try await changeRequest?.commitChanges()
+        try await Auth.auth().currentUser?.reload()
+        objectWillChange.send()
     }
 }
